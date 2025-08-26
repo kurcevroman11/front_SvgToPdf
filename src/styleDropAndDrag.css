@@ -1,33 +1,25 @@
-.hDEoCR svg {
-    display: none;
-    height: 300px !important;
-    border: 2px solid gray !important;
+.custom-uploader {
+  border: 2px solid #808080 !important;
+  height: 200px !important;
 }
 
-.hDEoCR {
-    height: 200px !important;
-    border: 2px solid gray !important;
-}
-
-.sc-fhHczv {
-    display: flex !important;
-    justify-content: center !important;
-}
-.gRPNIK {
-    display: flex !important;
-    justify-content: center !important;
-}
-
-.sc-ggWZvA {
-    font-size: 16px !important;
-}
-.iIlEMu {
-    font-size: 16px !important;
+.custom-uploader svg {
+  display: none !important;
 }
 
 .file-types {
     display: none;
 }
+ 
+.custom-uploader span{
+    font-size: 16px !important;
+}
+.custom-uploader div {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 
 

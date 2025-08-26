@@ -3,9 +3,8 @@ import { FileUploader } from "react-drag-drop-files";
 import "./styleDropAndDrag.css";
 import Check from "./assets/ok.svg";
 import Download from "./assets/download.svg";
-import type { Response } from "./response/response.ts"
+import type { Response } from "./response/response.ts";
 const apiUrl = import.meta.env.VITE_API_URL;
-
 
 export default function Index() {
   useEffect(() => {
@@ -14,7 +13,7 @@ export default function Index() {
 
   const [file, setFile] = useState(null);
   function HandleSubmit(file: any) {
-    setFile(file)
+    setFile(file);
   }
   const watermarkerInputRef = useRef<HTMLInputElement>(null);
   const [Watermarker, setWatermarker] = useState("");
@@ -59,18 +58,19 @@ export default function Index() {
         <div className="bg-gray-300 p-4 flex flex-col justify-center items-center">
           <div className="text-[20px] mb-3">Generate PDF from SVG</div>
           <div className="mb-5">
-            <FileUploader
-              handleChange={HandleSubmit}
-              name="file"
-              types={["SVG"]}
-              uploadedLabel="SVG file uploaded!"
-            >
-              {file && (
-                <div className="hDEoCR flex justify-center">
-                  <img src={Check} alt="ok" className="w-[140px] h-[140px]" />
-                </div>
-              )}
-            </FileUploader>
+            {file ? (
+              <div className="border-solid border-2 w-[322px] h-[200px] border-[#808080] flex justify-center items-center">
+                <img src={Check} alt="ok" className="w-[140px] h-[140px]" />
+              </div>
+            ) : (
+              <FileUploader
+                handleChange={HandleSubmit}
+                name="file"
+                types={["SVG"]}
+                classes="custom-uploader"
+                uploadedLabel="SVG file uploaded!"
+              />
+            )}
           </div>
           <input
             type="text"
