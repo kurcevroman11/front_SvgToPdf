@@ -13,7 +13,7 @@ export default function Index() {
   }, []);
 
   const [file, setFile] = useState(null);
-  function HandleSubmit(file) {
+  function HandleSubmit(file: any) {
     setFile(file)
   }
   const watermarkerInputRef = useRef<HTMLInputElement>(null);
